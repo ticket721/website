@@ -1,0 +1,15 @@
+{
+  "run_app": "run app",
+  "slogan_title": "Meet the future of ticketing",
+  "slogan_body": "Ticket721 leverages web 3.0 technologies to offer highly secured and high-tech digital tickets to its users",
+
+  "description_user_title": "Users can ...",
+  "description_user_1": "buy tickets by using credit card, dai or ethers",
+  "description_user_2": "store tickets in the offline & secured mobile wallet",
+  "description_user_3": "use the marketplace to buy or sell tickets",
+
+  "description_organizer_title": "Organizers can ...",
+  "description_organizer_1": "configure all the aspects of their events",
+  "description_organizer_2": "generate new revenue streams from the marketplace",
+  "description_organizer_3": "get complete insights on the activity of their tickets"
+}
