@@ -1,0 +1,21 @@
+.contact_logo {
+    width: 50px;
+    margin: 40px;
+    cursor: pointer;
+    transition: transform .5s ease;
+}
+
+.contact_logo:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 992px) {
+    .contact_logo {
+        width: 40px;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    .contact_logo:hover {}
+}
+

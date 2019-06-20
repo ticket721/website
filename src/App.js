@@ -4,6 +4,7 @@ import { withTranslation } from 'react-i18next';
 import './App.css';
 import LoadingLogo from './components/logo/loading';
 import Description from './sections/description';
+import Footer from './sections/footer';
 const DynamicLogo = React.lazy(() => import('./components/logo'));
 
 
@@ -21,7 +22,7 @@ class App extends React.Component {
                     </Suspense>
                 </div>
                 <Description/>
-
+                <Footer/>
             </div>
         );
     }
