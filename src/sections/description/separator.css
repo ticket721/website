@@ -1,0 +1,33 @@
+@keyframes bgSlide {
+    from {
+      background-position-x: 0;
+    }
+    to { 
+        background-position-x: 100%;
+    }
+}
+
+.separator {
+    position: 'relative';
+    width: 5px;
+    height: 500px;
+    margin-top: 5%;
+    border-radius: 5px;
+    background-image: url('../../assets/bg_separator.png');
+    animation-name: bgSlide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@media screen and (max-width: 1038px) {
+    .user-organizer-container {
+        flex-direction: column;
+    }
+
+    .separator {
+        height: 400px;
+        transform: rotate(90deg);
+        margin: -150px;
+    }
+}
