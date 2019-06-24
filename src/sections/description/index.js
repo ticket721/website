@@ -1,13 +1,12 @@
 import { List, Typography } from 'antd';
 import * as React from 'react';
 import { withTranslation } from 'react-i18next';
-import bg_repeat from '../../assets/bg_repeat.svg';
-import coins from '../../assets/coins.png';
-import locked_wallet from '../../assets/locked_wallet.png';
-import marketplace_cart from '../../assets/marketplace_cart.png';
-import configure from '../../assets/configure.png';
-import store_revenue from '../../assets/store_revenue.png';
-import stats from '../../assets/stats.png';
+import coins from '../../assets/coins.svg';
+import locked_wallet from '../../assets/locked_wallet.svg';
+import marketplace_cart from '../../assets/marketplace_cart.svg';
+import configure from '../../assets/configure.svg';
+import store_revenue from '../../assets/store_revenue.svg';
+import stats from '../../assets/stats.svg';
 import './separator.css';
 
 class Description extends React.Component {
@@ -84,108 +83,97 @@ class Description extends React.Component {
         return <div
             style={{
                 width: '100%',
-                backgroundImage: `url('${bg_repeat}')`,
-                backgroundRepeat: 'repeat',
-                backgroundSize: 50,
-                boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
+                padding: 25,
+                paddingTop: 150,
+                paddingBottom: 100,
+                backgroundColor: '#131313',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center'
             }}
         >
-            <div
+            <Typography.Text
                 style={{
-                    width: '100%',
-                    padding: 25,
-                    paddingTop: 150,
-                    paddingBottom: 100,
-                    backgroundImage: `linear-gradient(135deg, #212121 30%, transparent 30%, transparent 70%, #212121 30%)`,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    textAlign: 'center'
+                    fontSize: 48,
+                    color: '#F0F2F4',
+                    fontWeight: 100,
+                    fontFamily: 'Roboto'
                 }}
             >
-                <Typography.Text
+                {this.props.t('slogan_title')}
+            </Typography.Text>
+            <Typography.Text
+                style={{
+                    fontSize: 24,
+                    color: '#F0F2F4',
+                    fontWeight: 300,
+                    fontFamily: 'Roboto',
+                    marginTop: 24
+                }}
+            >
+                {this.props.t('slogan_body')}
+            </Typography.Text>
+            <div
+                className='user-organizer-container'
+                style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-around',
+                    width: '100%',
+                    boxSizing: 'border-box',
+                    marginTop: 150
+                }}
+            >
+                <List
                     style={{
-                        fontSize: 48,
-                        color: '#F0F2F4',
-                        fontWeight: 100,
-                        fontFamily: 'Roboto'
-                    }}
-                >
-                    {this.props.t('slogan_title')}
-                </Typography.Text>
-                <Typography.Text
-                    style={{
-                        fontSize: 24,
-                        color: '#F0F2F4',
-                        fontWeight: 300,
-                        fontFamily: 'Roboto',
-                        marginTop: 24
-                    }}
-                >
-                    {this.props.t('slogan_body')}
-                </Typography.Text>
-                <div
-                    className='user-organizer-container'
-                    style={{
+                        flex: '1 auto',
                         display: 'flex',
+                        flexDirection: 'column',
                         alignItems: 'center',
-                        justifyContent: 'space-around',
-                        width: '100%',
-                        boxSizing: 'border-box',
-                        marginTop: 150
+                        justifyContent: 'center',
+                        paddingTop: 10
                     }}
-                >
-                    <List
-                        style={{
-                            flex: '1 auto',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            paddingTop: 10
-                        }}
-                        header={
-                            <div style={{marginBottom: 36}}>
-                                <Typography.Text style={{fontSize: 36, color: '#F0F2F4', marginBottom: 24, width: '80%'}}>
-                                    {this.props.t('description_user_title')}
-                                </Typography.Text>
-                            </div>
-                        }
-                        dataSource={userData}
-                        renderItem={item => (
-                            <List.Item>
-                                {item}
-                            </List.Item>
-                        )
-                        }
-                    />
-                    <div className='separator'/>
-                    <List
-                        style={{
-                            flex: '1 auto',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            paddingTop: 10,
-                        }}
-                        header={
-                            <div style={{marginBottom: 36}}>
-                                <Typography.Text style={{fontSize: 36, color: '#F0F2F4', marginBottom: 24, width: '80%'}}>
-                                    {this.props.t('description_organizer_title')}
-                                </Typography.Text>
-                            </div>
-                        }
-                        dataSource={organizerData}
-                        renderItem={item => (
-                            <List.Item>
-                                {item}
-                            </List.Item>
-                        )
-                        }
-                    />
-                </div>
+                    header={
+                        <div style={{marginBottom: 36}}>
+                            <Typography.Text style={{fontSize: 36, color: '#F0F2F4', marginBottom: 24, width: '80%'}}>
+                                {this.props.t('description_user_title')}
+                            </Typography.Text>
+                        </div>
+                    }
+                    dataSource={userData}
+                    renderItem={item => (
+                        <List.Item>
+                            {item}
+                        </List.Item>
+                    )
+                    }
+                />
+                <List
+                    style={{
+                        flex: '1 auto',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        paddingTop: 10,
+                    }}
+                    header={
+                        <div style={{marginBottom: 36}}>
+                            <Typography.Text style={{fontSize: 36, color: '#F0F2F4', marginBottom: 24, width: '80%'}}>
+                                {this.props.t('description_organizer_title')}
+                            </Typography.Text>
+                        </div>
+                    }
+                    dataSource={organizerData}
+                    renderItem={item => (
+                        <List.Item>
+                            {item}
+                        </List.Item>
+                    )
+                    }
+                />
             </div>
         </div>;
     }
