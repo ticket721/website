@@ -15,9 +15,9 @@ class Description extends React.Component {
     render() {
         return <div className='container'>
             <div className='slogan'>
-                <Typography.Text className='slogan-title'>
+                <Typography.Title>
                     {this.props.t('slogan_title')}
-                </Typography.Text>
+                </Typography.Title>
                 <Typography.Text className='slogan-body'>
                     {this.props.t('slogan_body')}
                 </Typography.Text>
@@ -33,9 +33,9 @@ class Description extends React.Component {
                     <div className='desc-row desc-1'>
                         <img src={coins} alt='Coins'/>
                         <div className='description'>
-                            <Typography.Text>
+                            <Typography.Title level={3}>
                                 {this.props.t('desc_user_desc_title_1')}
-                            </Typography.Text>
+                            </Typography.Title>
                             <Typography.Text>
                                 {this.props.t('desc_user_desc_body_1')}
                             </Typography.Text> 
@@ -43,9 +43,9 @@ class Description extends React.Component {
                     </div>
                     <div className='desc-row desc-2'>
                         <div className='description'>
-                            <Typography.Text>
+                            <Typography.Title level={3}>
                                 {this.props.t('desc_user_desc_title_2')}
-                            </Typography.Text>
+                            </Typography.Title>
                             <Typography.Text>
                                 {this.props.t('desc_user_desc_body_2')}
                             </Typography.Text> 
@@ -55,9 +55,9 @@ class Description extends React.Component {
                     <div className='desc-row desc-3'>
                         <img src={shopping_bag} alt='Marketplace'/>
                         <div className='description'>
-                            <Typography.Text>
+                            <Typography.Title level={3}>
                                 {this.props.t('desc_user_desc_title_3')}
-                            </Typography.Text>
+                            </Typography.Title>
                             <Typography.Text>
                                 {this.props.t('desc_user_desc_body_3')}
                             </Typography.Text> 
@@ -76,9 +76,9 @@ class Description extends React.Component {
                     <div className='desc-row desc-1'>
                         <img src={configure} alt='Configuring'/>
                         <div className='description'>
-                            <Typography.Text>
+                            <Typography.Title level={3}>
                                 {this.props.t('desc_organiser_desc_title_1')}
-                            </Typography.Text>
+                            </Typography.Title>
                             <Typography.Text>
                                 {this.props.t('desc_organiser_desc_body_1')}
                             </Typography.Text> 
@@ -86,9 +86,9 @@ class Description extends React.Component {
                     </div>
                     <div className='desc-row desc-2'>
                         <div className='description'>
-                            <Typography.Text>
+                            <Typography.Title level={3}>
                                 {this.props.t('desc_organiser_desc_title_2')}
-                            </Typography.Text>
+                            </Typography.Title>
                             <Typography.Text>
                                 {this.props.t('desc_organiser_desc_body_2')}
                             </Typography.Text> 
@@ -98,9 +98,9 @@ class Description extends React.Component {
                     <div className='desc-row desc-3'>
                         <img src={stats} alt='Stats'/>
                         <div className='description'>
-                            <Typography.Text>
+                            <Typography.Title level={3}>
                                 {this.props.t('desc_organiser_desc_title_3')}
-                            </Typography.Text>
+                            </Typography.Title>
                             <Typography.Text>
                                 {this.props.t('desc_organiser_desc_body_3')}
                             </Typography.Text> 

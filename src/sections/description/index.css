@@ -14,7 +14,7 @@
     margin: 200px 70px 200px;
 }
 
-.slogan-title,
+.slogan > h1,
 .slogan-body {
     font-size: 3.5em;
     color: #F0F2F4;
@@ -123,18 +123,17 @@
     text-align: left;
 }
 
-.description > span {
+.description > * {
     font-size: 1.25em;
     font-weight: 300;
     font-family: Roboto;
     color: #252525;
 }
-.description > span:nth-child(1) {
+
+.description h3 {
     font-weight: 400;
-    font-size: 1.5em;
-    margin-bottom: 10px;
 }
 
-.organiser .description > span {
+.organiser .description > * {
     color: #F0F2F4;
 }
