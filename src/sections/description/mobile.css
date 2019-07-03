@@ -3,8 +3,8 @@
         margin: 150px 35px 150px;
     }
 
-    .slogan-title {
-        font-size: 2em;
+    .slogan > h1 {
+        font-size: 2.5em;
     }
     
     .slogan-body {
