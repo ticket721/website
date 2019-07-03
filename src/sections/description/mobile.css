@@ -1,0 +1,33 @@
+@media screen and (max-width: 768px) {
+    .slogan {
+        margin: 150px 35px 150px;
+    }
+
+    .slogan-title {
+        font-size: 2em;
+    }
+    
+    .slogan-body {
+        font-size: 1.25em;
+    }
+
+    .desc-row {
+        flex-direction: column;
+        margin-top: 150px;
+    }
+
+    .desc-row.desc-2 {
+        flex-direction: column-reverse;
+    }
+
+    .desc-row > img,
+    .desc-row.desc-2 > img {
+        margin: 0;
+        width: 300px;
+    }
+
+    .description {
+        width: 300px;
+        margin-top: 50px;
+    }
+}
