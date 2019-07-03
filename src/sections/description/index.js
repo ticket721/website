@@ -1,179 +1,112 @@
-import { List, Typography } from 'antd';
+import { Typography } from 'antd';
 import * as React from 'react';
 import { withTranslation } from 'react-i18next';
 import coins from '../../assets/coins.svg';
 import locked_wallet from '../../assets/locked_wallet.svg';
-import marketplace_cart from '../../assets/marketplace_cart.svg';
+import shopping_bag from '../../assets/shopping_bag.svg';
 import configure from '../../assets/configure.svg';
 import store_revenue from '../../assets/store_revenue.svg';
 import stats from '../../assets/stats.svg';
-import './separator.css';
+import './index.css';
+import './mobile.css';
 
 class Description extends React.Component {
 
     render() {
-        const userData = [];
-        const organizerData = [];
-
-        const metadata = {
-            user: [
-                {
-                    icon: coins,
-                    alt: 'Coins'
-                },
-                {
-                    icon: locked_wallet,
-                    alt: 'Wallet'
-                },
-                {
-                    icon: marketplace_cart,
-                    alt: 'Marketplace'
-                }
-            ],
-            organizer: [
-                {
-                    icon: configure,
-                    alt: 'Configuring'
-                },
-                {
-                    icon: store_revenue,
-                    alt: 'Revenue'
-                },
-                {
-                    icon: stats,
-                    alt: 'Stats'
-                }
-            ]
-        };
-
-        for (let i = 0; i < 3; i++) {
-            userData.push(
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    marginBottom: 15,
-                    width: '100%'
-                }}>
-                    <img style={{width: '50%'}} src={metadata.user[i].icon} alt={metadata.user[i].alt}/>
-                    <Typography.Text style={{fontSize: '1.5em', color: '#F0F2F4', fontWeight: 300, margin: 12}}>
-                        {this.props.t(`description_user_${i + 1}`)}
+        return <div className='container'>
+            <div className='slogan'>
+                <Typography.Text className='slogan-title'>
+                    {this.props.t('slogan_title')}
+                </Typography.Text>
+                <Typography.Text className='slogan-body'>
+                    {this.props.t('slogan_body')}
+                </Typography.Text>
+            </div>
+            <div className='user'>
+                <div className='title'>
+                    <Typography.Text className='text-title'>
+                        {this.props.t('desc_user_title')}
+                    </Typography.Text>
+                    <div className='separator'></div>
+                </div>
+                <div className='descriptions'>
+                    <div className='desc-row desc-1'>
+                        <img src={coins} alt='Coins'/>
+                        <div className='description'>
+                            <Typography.Text>
+                                {this.props.t('desc_user_desc_title_1')}
+                            </Typography.Text>
+                            <Typography.Text>
+                                {this.props.t('desc_user_desc_body_1')}
+                            </Typography.Text> 
+                        </div>
+                    </div>
+                    <div className='desc-row desc-2'>
+                        <div className='description'>
+                            <Typography.Text>
+                                {this.props.t('desc_user_desc_title_2')}
+                            </Typography.Text>
+                            <Typography.Text>
+                                {this.props.t('desc_user_desc_body_2')}
+                            </Typography.Text> 
+                        </div>
+                        <img src={locked_wallet} alt='Wallet'/>
+                    </div>
+                    <div className='desc-row desc-3'>
+                        <img src={shopping_bag} alt='Marketplace'/>
+                        <div className='description'>
+                            <Typography.Text>
+                                {this.props.t('desc_user_desc_title_3')}
+                            </Typography.Text>
+                            <Typography.Text>
+                                {this.props.t('desc_user_desc_body_3')}
+                            </Typography.Text> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='organiser'>
+                <div className='title'>
+                    <div className='separator'></div>
+                    <Typography.Text className='text-title'>
+                        {this.props.t('desc_organiser_title')}
                     </Typography.Text>
                 </div>
-            )
-
-            organizerData.push(
-                <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    marginBottom: 15,
-                    width: '100%',
-                }}>
-                    <img style={{width: '50%'}} src={metadata.organizer[i].icon} alt={metadata.organizer[i].alt}/>
-                    <Typography.Text style={{fontSize: '1.5em', color: '#F0F2F4', fontWeight: 300, margin: 12}}>
-                        {this.props.t(`description_organizer_${i + 1}`)}
-                    </Typography.Text>
+                <div className='descriptions'>
+                    <div className='desc-row desc-1'>
+                        <img src={configure} alt='Configuring'/>
+                        <div className='description'>
+                            <Typography.Text>
+                                {this.props.t('desc_organiser_desc_title_1')}
+                            </Typography.Text>
+                            <Typography.Text>
+                                {this.props.t('desc_organiser_desc_body_1')}
+                            </Typography.Text> 
+                        </div>
+                    </div>
+                    <div className='desc-row desc-2'>
+                        <div className='description'>
+                            <Typography.Text>
+                                {this.props.t('desc_organiser_desc_title_2')}
+                            </Typography.Text>
+                            <Typography.Text>
+                                {this.props.t('desc_organiser_desc_body_2')}
+                            </Typography.Text> 
+                        </div>
+                        <img src={store_revenue} alt='Revenue'/>
+                    </div>
+                    <div className='desc-row desc-3'>
+                        <img src={stats} alt='Stats'/>
+                        <div className='description'>
+                            <Typography.Text>
+                                {this.props.t('desc_organiser_desc_title_3')}
+                            </Typography.Text>
+                            <Typography.Text>
+                                {this.props.t('desc_organiser_desc_body_3')}
+                            </Typography.Text> 
+                        </div>
+                    </div>
                 </div>
-            )
-        }
-
-        return <div
-            style={{
-                width: '100%',
-                padding: 25,
-                paddingTop: 150,
-                paddingBottom: 100,
-                backgroundColor: '#131313',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textAlign: 'center'
-            }}
-        >
-            <Typography.Text
-                style={{
-                    fontSize: 48,
-                    color: '#F0F2F4',
-                    fontWeight: 100,
-                    fontFamily: 'Roboto'
-                }}
-            >
-                {this.props.t('slogan_title')}
-            </Typography.Text>
-            <Typography.Text
-                style={{
-                    fontSize: 24,
-                    color: '#F0F2F4',
-                    fontWeight: 300,
-                    fontFamily: 'Roboto',
-                    marginTop: 24
-                }}
-            >
-                {this.props.t('slogan_body')}
-            </Typography.Text>
-            <div
-                className='user-organizer-container'
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-around',
-                    width: '100%',
-                    boxSizing: 'border-box',
-                    marginTop: 150
-                }}
-            >
-                <List
-                    style={{
-                        flex: '1 auto',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        paddingTop: 10
-                    }}
-                    header={
-                        <div style={{marginBottom: 36}}>
-                            <Typography.Text style={{fontSize: 36, color: '#F0F2F4', marginBottom: 24, width: '80%'}}>
-                                {this.props.t('description_user_title')}
-                            </Typography.Text>
-                        </div>
-                    }
-                    dataSource={userData}
-                    renderItem={item => (
-                        <List.Item>
-                            {item}
-                        </List.Item>
-                    )
-                    }
-                />
-                <List
-                    style={{
-                        flex: '1 auto',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        paddingTop: 10,
-                    }}
-                    header={
-                        <div style={{marginBottom: 36}}>
-                            <Typography.Text style={{fontSize: 36, color: '#F0F2F4', marginBottom: 24, width: '80%'}}>
-                                {this.props.t('description_organizer_title')}
-                            </Typography.Text>
-                        </div>
-                    }
-                    dataSource={organizerData}
-                    renderItem={item => (
-                        <List.Item>
-                            {item}
-                        </List.Item>
-                    )
-                    }
-                />
             </div>
         </div>;
     }
