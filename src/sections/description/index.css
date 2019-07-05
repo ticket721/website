@@ -94,6 +94,7 @@
 }
 
 .desc-row > img {
+    width: 37%;
     margin-right: 50px;
     padding: 55px 65px;
     border-radius: 6px;
