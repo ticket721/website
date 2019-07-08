@@ -5,14 +5,14 @@ body {
 }
 
 .play_button {
-  border-color: #202020 !important;
-  color: #202020 !important;
+  border-color: #535353 !important;
+  color: #535353 !important;
 }
 
 .play_button:hover {
     border-color: transparent !important;
     color: white !important;
-    background-color: #202020 !important;
+    background-color: #535353 !important;
   opacity: 1;
 }
 

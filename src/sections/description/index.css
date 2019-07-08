@@ -1,0 +1,140 @@
+.container {
+    width: 100%;
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    margin: 200px 70px 200px;
+}
+
+.slogan > h1,
+.slogan-body {
+    font-size: 3.5em;
+    color: #F0F2F4;
+    font-weight: 100;
+    font-family: Roboto;
+}
+
+.slogan-body {
+    font-weight: 300;
+    font-size: 1.8em;
+    margin-top: 24px;
+}
+
+.user,
+.organiser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F0F2F4;
+    width: 100%;
+}
+
+.organiser {
+    background-color: #252525;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.organiser .title {
+    justify-content: flex-end;
+}
+
+.text-title {
+    padding: 0 40px;
+    font-size: 3em;
+    font-family: Roboto;
+    font-weight: 300;
+    background-color: #F0F2F4;
+    color: #252525;
+    z-index: 1;
+}
+
+.organiser .text-title {
+    background-color: #252525;
+    color: #F0F2F4;
+}
+
+.separator {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #252525;
+}
+
+.organiser .separator {
+    background-color: #F0F2F4;
+}
+
+.descriptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 750px;
+    margin: 0 100px 250px;
+}
+
+.desc-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+
+.desc-row > img {
+    width: 37%;
+    margin-right: 50px;
+    padding: 55px 65px;
+    border-radius: 6px;
+    box-shadow: 2px 2px rgba(37, 37, 37, 0.5);
+    background-color: #252525;
+}
+
+.desc-row.desc-2 > img {
+    margin-right: 0;
+    margin-left: 50px; 
+    box-shadow: -2px 2px rgba(37, 37, 37, 0.5);
+}
+
+.organiser .desc-row > img {
+    box-shadow: 2px 2px rgba(240, 242, 244, 0.5);
+    background-color: #F0F2F4;
+}
+
+.organiser .desc-row.desc-2 > img {
+    box-shadow: -2px 2px rgba(240, 242, 244, 0.5);
+}
+
+.description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.description > * {
+    font-size: 1.25em;
+    font-weight: 300;
+    font-family: Roboto;
+    color: #252525;
+}
+
+.description h3 {
+    font-weight: 400;
+}
+
+.organiser .description > * {
+    color: #F0F2F4;
+}

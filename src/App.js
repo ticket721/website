@@ -12,7 +12,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <Button className='play_button' ghost={true} style={{position: 'absolute', right: 20, top: 20}} type={'primary'} size={'large'}>
+                <Button className='play_button' ghost={true} style={{position: 'fixed', right: 20, top: 20, zIndex: 1000}} type={'primary'} size={'large'}>
                     {this.props.t('run_app')}
                     <Icon type="caret-right" />
                 </Button>

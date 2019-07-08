@@ -3,15 +3,21 @@
   "slogan_title": "Meet the future of ticketing",
   "slogan_body": "Ticket721 leverages web 3.0 technologies to offer highly secured and high-tech digital tickets to its users",
 
-  "description_user_title": "Users can ...",
-  "description_user_1": "buy tickets by using credit card, dai or ethers",
-  "description_user_2": "store tickets in the offline & secured mobile wallet",
-  "description_user_3": "use the marketplace to buy or sell tickets",
+  "desc_user_title": "For User",
+  "desc_user_desc_title_1": "Multi Currency",
+  "desc_user_desc_title_2": "Secure Wallet",
+  "desc_user_desc_title_3": "Marketplace",
+  "desc_user_desc_body_1": "The platform gives you the possibility to use multiple payment methods, perform transaction with DAI / Ether directly from your wallet or with your Credit Card",
+  "desc_user_desc_body_2": "Furthermore, thanks to the Companion Application, you will be able to store all your tickets in one place, a Dedicated, Secure & Offline mobile wallet",
+  "desc_user_desc_body_3": "Lastly, the Marketplace allows you to buy tickets for your favorite events from other users even after they are sold out, or to sell yours to someone else",
 
-  "description_organizer_title": "Organizers can ...",
-  "description_organizer_1": "configure all the aspects of their events",
-  "description_organizer_2": "generate new revenue streams from the marketplace",
-  "description_organizer_3": "get complete insights on the activity of their tickets",
+  "desc_organiser_title": "For Organiser",
+  "desc_organiser_desc_title_1": "Event Configuration",
+  "desc_organiser_desc_title_2": "Income Streams",
+  "desc_organiser_desc_title_3": "Complete tracking",
+  "desc_organiser_desc_body_1": "When an event is created, ticket721 enables you to adjust many of its aspects, such as tickets cap, marketplace, …",
+  "desc_organiser_desc_body_2": "The establishment of a marketplace will multiply the transactions related to your event, thus producing new income streams",
+  "desc_organiser_desc_body_3": "Moreover, the activity of your tickets will entirely be followed-up, from the sale and until the due date of the corresponding event, you will benefit from information about all the transactions",
 
   "chat_with_us": "Chat with us !"
 }
