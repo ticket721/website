@@ -1,0 +1,135 @@
+.showcase-container {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(#d3d9df,#F0F2F4);
+}
+
+.geometric-container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.geometric-container > div {
+    position: absolute;
+    top: 2%;
+    left: -10%;
+    width: 120%;
+    height: 70%;
+    transform: rotate(2deg);
+    background-color: #171717;
+}
+
+.geometric-container > div:last-child {
+    top: 28%;
+    transform: rotate(-2deg);
+}
+
+.showcase-title-container {
+    position: absolute;
+    top: 25vh;
+    left: 30px;
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase-title-container > h3 {
+    text-align: start;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 2.4em;
+    color: #F0F2F4;
+}
+
+.showcase-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-bottom: 15px; 
+}
+
+.showcase-tabs > span {
+    position: relative;
+    margin-right: 15px;
+    padding-bottom: 5px; 
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.6em;
+    color: #F0F2F4;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.showcase-tabs > span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 5px;
+    content: attr(data-hover);
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 0;
+    border-bottom: solid 1px #F0F2F4;
+}
+
+.showcase-tabs > :not(.selected):hover::before {
+    max-width: 100%;
+    transition: max-width 0.4s;
+}
+
+.showcase-tabs > .selected {
+    opacity: 1;
+    border-bottom: solid 1px #F0F2F4;
+}
+
+.showcase-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.showcase-item {
+    display: none;
+    height: 100%;
+}
+
+.showcase-item.active {
+    display: flex;
+}
+
+.showcase-subtitle {
+    display: none;
+}
+
+.showcase-desc {
+    flex: 1;
+    margin: 50vh 15% 0 3%;
+    text-align: start;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.3em;
+    color: #F0F2F4;
+    z-index: 1;
+}
+
+.showcase-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+.showcase-screen > img {
+    width: 80%;
+}
+
+.showcase-screen > .screen_wallet {
+    width: 45%;
+}
+
+.showcase-screen > .screen_scanner {
+    width: 50%;
+}
