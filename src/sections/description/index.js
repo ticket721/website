@@ -13,98 +13,76 @@ import './mobile.css';
 class Description extends React.Component {
 
     render() {
-        return <div className='container'>
-            <div className='slogan'>
-                <Typography.Title>
-                    {this.props.t('slogan_title')}
-                </Typography.Title>
-                <Typography.Text className='slogan-body'>
-                    {this.props.t('slogan_body')}
-                </Typography.Text>
-            </div>
-            <div className='user'>
-                <div className='title'>
-                    <Typography.Text className='text-title'>
-                        {this.props.t('desc_user_title')}
-                    </Typography.Text>
-                    <div className='separator'></div>
-                </div>
-                <div className='descriptions'>
-                    <div className='desc-row desc-1'>
-                        <img src={coins} alt='Coins'/>
-                        <div className='description'>
-                            <Typography.Title level={3}>
-                                {this.props.t('desc_user_desc_title_1')}
-                            </Typography.Title>
-                            <Typography.Text>
-                                {this.props.t('desc_user_desc_body_1')}
-                            </Typography.Text> 
-                        </div>
-                    </div>
-                    <div className='desc-row desc-2'>
-                        <div className='description'>
-                            <Typography.Title level={3}>
-                                {this.props.t('desc_user_desc_title_2')}
-                            </Typography.Title>
-                            <Typography.Text>
-                                {this.props.t('desc_user_desc_body_2')}
-                            </Typography.Text> 
-                        </div>
-                        <img src={locked_wallet} alt='Wallet'/>
-                    </div>
-                    <div className='desc-row desc-3'>
-                        <img src={shopping_bag} alt='Marketplace'/>
-                        <div className='description'>
-                            <Typography.Title level={3}>
-                                {this.props.t('desc_user_desc_title_3')}
-                            </Typography.Title>
-                            <Typography.Text>
-                                {this.props.t('desc_user_desc_body_3')}
-                            </Typography.Text> 
-                        </div>
+        const iconData = {
+            user: [
+                {
+                    name: 'Coins',
+                    src: coins
+                },
+                {
+                    name: 'Wallet',
+                    src: locked_wallet
+                },
+                {
+                    name: 'Marketplace',
+                    src: shopping_bag
+                }
+            ],
+            organiser: [
+                {
+                    name: 'Configuring',
+                    src: configure
+                },
+                {
+                    name: 'Revenue',
+                    src: store_revenue
+                },
+                {
+                    name: 'Stats',
+                    src: stats
+                }
+            ]
+        };
+
+        return <div className={'desc-container ' + this.props.userType}>
+            <div className='descriptions'>
+                <div className='desc-row desc-1'>
+                    <img
+                    src={iconData[this.props.userType][0].src}
+                    alt={iconData[this.props.userType][0].name}/>
+                    <div className='description'>
+                        <Typography.Title level={3}>
+                            {this.props.t('desc_' + this.props.userType + '_title_1')}
+                        </Typography.Title>
+                        <Typography.Text>
+                            {this.props.t('desc_' + this.props.userType + '_body_1')}
+                        </Typography.Text> 
                     </div>
                 </div>
-            </div>
-            <div className='organiser'>
-                <div className='title'>
-                    <div className='separator'></div>
-                    <Typography.Text className='text-title'>
-                        {this.props.t('desc_organiser_title')}
-                    </Typography.Text>
+                <div className='desc-row desc-2'>
+                    <div className='description'>
+                        <Typography.Title level={3}>
+                            {this.props.t('desc_' + this.props.userType + '_title_2')}
+                        </Typography.Title>
+                        <Typography.Text>
+                            {this.props.t('desc_' + this.props.userType + '_body_2')}
+                        </Typography.Text> 
+                    </div>
+                    <img
+                    src={iconData[this.props.userType][1].src}
+                    alt={iconData[this.props.userType][1].name}/>
                 </div>
-                <div className='descriptions'>
-                    <div className='desc-row desc-1'>
-                        <img src={configure} alt='Configuring'/>
-                        <div className='description'>
-                            <Typography.Title level={3}>
-                                {this.props.t('desc_organiser_desc_title_1')}
-                            </Typography.Title>
-                            <Typography.Text>
-                                {this.props.t('desc_organiser_desc_body_1')}
-                            </Typography.Text> 
-                        </div>
-                    </div>
-                    <div className='desc-row desc-2'>
-                        <div className='description'>
-                            <Typography.Title level={3}>
-                                {this.props.t('desc_organiser_desc_title_2')}
-                            </Typography.Title>
-                            <Typography.Text>
-                                {this.props.t('desc_organiser_desc_body_2')}
-                            </Typography.Text> 
-                        </div>
-                        <img src={store_revenue} alt='Revenue'/>
-                    </div>
-                    <div className='desc-row desc-3'>
-                        <img src={stats} alt='Stats'/>
-                        <div className='description'>
-                            <Typography.Title level={3}>
-                                {this.props.t('desc_organiser_desc_title_3')}
-                            </Typography.Title>
-                            <Typography.Text>
-                                {this.props.t('desc_organiser_desc_body_3')}
-                            </Typography.Text> 
-                        </div>
+                <div className='desc-row desc-3'>
+                    <img
+                    src={iconData[this.props.userType][2].src}
+                    alt={iconData[this.props.userType][2].name}/>
+                    <div className='description'>
+                        <Typography.Title level={3}>
+                            {this.props.t('desc_' + this.props.userType + '_title_3')}
+                        </Typography.Title>
+                        <Typography.Text>
+                            {this.props.t('desc_' + this.props.userType + '_body_3')}
+                        </Typography.Text> 
                     </div>
                 </div>
             </div>
