@@ -1,0 +1,21 @@
+.slogan {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 200px 70px;
+    background-color: #171717;
+}
+
+.slogan > h1,
+.slogan-body {
+    font-size: 3.5em;
+    color: #F0F2F4;
+    font-weight: 100;
+    font-family: Roboto;
+}
+
+.slogan-body {
+    font-weight: 300;
+    font-size: 1.8em;
+    margin-top: 24px;
+}

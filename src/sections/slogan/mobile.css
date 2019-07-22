@@ -1,0 +1,13 @@
+@media screen and (max-width: 768px) {
+    .slogan {
+        padding: 150px 35px;
+    }
+
+    .slogan > h1 {
+        font-size: 2.5em;
+    }
+    
+    .slogan-body {
+        font-size: 1.25em;
+    }
+}
