@@ -1,23 +1,40 @@
 {
-  "run_app": "run app",
-  "slogan_title": "Meet the future of ticketing",
-  "slogan_body": "Ticket721 leverages web 3.0 technologies to offer highly secured and high-tech digital tickets to its users",
+    "run_app": "run app",
+    "slogan_title": "Meet the future of ticketing",
+    "slogan_body": "Ticket721 leverages web 3.0 technologies to offer highly secured and high-tech digital tickets to its users",
 
-  "desc_user_title": "For User",
-  "desc_user_desc_title_1": "Multi Currency",
-  "desc_user_desc_title_2": "Secure Wallet",
-  "desc_user_desc_title_3": "Marketplace",
-  "desc_user_desc_body_1": "The platform gives you the possibility to use multiple payment methods, perform transaction with DAI / Ether directly from your wallet or with your Credit Card",
-  "desc_user_desc_body_2": "Furthermore, thanks to the Companion Application, you will be able to store all your tickets in one place, a Dedicated, Secure & Offline mobile wallet",
-  "desc_user_desc_body_3": "Lastly, the Marketplace allows you to buy tickets for your favorite events from other users even after they are sold out, or to sell yours to someone else",
+    "tab_user_title": "For User",
+    "desc_user_title_1": "Multi Currency",
+    "desc_user_title_2": "Secure Wallet",
+    "desc_user_title_3": "Marketplace",
+    "desc_user_body_1": "The platform gives you the possibility to use multiple payment methods, perform transaction with DAI / Ether directly from your wallet or with your Credit Card",
+    "desc_user_body_2": "Thanks to the Companion Application, you will be able to store all your tickets in one place, a Dedicated, Secure & Offline mobile wallet",
+    "desc_user_body_3": "The Marketplace allows you to buy tickets for your favorite events from other users even after they are sold out, or to sell yours to someone else",
 
-  "desc_organiser_title": "For Organiser",
-  "desc_organiser_desc_title_1": "Event Configuration",
-  "desc_organiser_desc_title_2": "Income Streams",
-  "desc_organiser_desc_title_3": "Complete tracking",
-  "desc_organiser_desc_body_1": "When an event is created, ticket721 enables you to adjust many of its aspects, such as tickets cap, marketplace, …",
-  "desc_organiser_desc_body_2": "The establishment of a marketplace will multiply the transactions related to your event, thus producing new income streams",
-  "desc_organiser_desc_body_3": "Moreover, the activity of your tickets will entirely be followed-up, from the sale and until the due date of the corresponding event, you will benefit from information about all the transactions",
+    "tab_organiser_title": "For Organiser",
+    "desc_organiser_title_1": "Event Configuration",
+    "desc_organiser_title_2": "Income Streams",
+    "desc_organiser_title_3": "Complete tracking",
+    "desc_organiser_body_1": "Ticket721 enables you to adjust many of your event's aspects, such as tickets cap, marketplace resell strategy, price evolution, categories …",
+    "desc_organiser_body_2": "The establishment of a marketplace will multiply the transactions related to your event, thus producing new income streams",
+    "desc_organiser_body_3": "The activity of your tickets will entirely be followed-up, from the sale and until the due date of the corresponding event, you will benefit from information about all the transactions",
 
-  "chat_with_us": "Chat with us !"
+    "showcase_user_title": "Purchase and manage tickets easily",
+    "showcase_user_subtitle_1": "Home Page",
+    "showcase_user_subtitle_2": "Marketplace",
+    "showcase_user_subtitle_3": "Nomad Wallet",
+    "showcase_user_body_1": "Discover all the new events happening near you and select the ones that will make your weeks more exceptional. Get more information about it by going to the dedicated Event Page.",
+    "showcase_user_body_2": "Browse tickets sold by other users to find your last minute ticket for the event of your dreams. The Marketplace allows you to sell your tickets to other users in a fast and secured manner. You might even make some profit.",
+    "showcase_user_body_3": "Stack all your tickets in your Secured Wallet and access it directly on your smartphone without any connectivity.",
+
+    "showcase_organiser_title": "Create events and monitor their activity",
+    "showcase_organiser_subtitle_1": "Administration Page",
+    "showcase_organiser_subtitle_2": "Scanner App",
+    "showcase_organiser_subtitle_3": "Statistics",
+    "showcase_organiser_body_1": "Create or modify your events in a simple manner, directly from the website. You set all the rules, how the tickets are sold and if users are allowed to use the Marketplace. Then watch your funds go up in real time and decide when to withdraw.",
+    "showcase_organiser_body_2": "Use our Scanner to verify the authenticity of a ticket. QR Codes are generated every 10 seconds and contain a cryptographic proof that a user owns a ticket. The scanner will check all these information for you.",
+    "showcase_organiser_body_3": "Retrieve valuable statistical data about your event, allowing you to adjust its characteristics in real time. Sell count under expectations ? Try lowering the prices. All tickets sold ? Raise the ticket count. Not enough Marketplace activity ? Lower your fees.",
+
+
+    "chat_with_us": "Chat with us !"
 }
