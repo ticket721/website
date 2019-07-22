@@ -1,49 +1,100 @@
 @import '~antd/dist/antd.css';
 
 body {
-  background-color: #F0F2F4;
-}
-
-.play_button {
-  border-color: #535353 !important;
-  color: #535353 !important;
-}
-
-.play_button:hover {
-    border-color: transparent !important;
-    color: white !important;
-    background-color: #535353 !important;
-  opacity: 1;
-}
-
-.App {
-  text-align: center;
-  height: 100%;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+    background-color: #F0F2F4;
 }
 
 #root {
-  height: 100%;
+    height: 100%;
+}
+
+.App {
+    text-align: center;
+    height: 100%;
+}
+
+.App > .play-button {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+    border-color: #535353;
+    color: #535353;
+    background-color: transparent;
+}
+
+.App > .play-button:hover {
+    border-color: transparent;
+    color: white;
+    background-color: #535353;
+    opacity: 1;
+}
+
+.logo-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 10%;
+    background-color: #171717;
+}
+
+.tabs > .tab {
+    flex: 1;
+    padding: 10px 0;
+}
+
+.tab > span {
+    position: relative;
+    display: inline-block;
+    padding-top: 8px;
+    color: #949596;
+    font-size: 2.5em;
+    font-family: Roboto;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.tab > span::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding-top: 8px;
+    color: #F0F2F4;
+    max-width: 0;
+    white-space: nowrap;
+    content: attr(data-hover);
+    transition: max-width 0.5s;
+}
+
+.tab > span:hover::before {
+    max-width: 100%;
+}
+
+.tab.selected > span {
+    color: #F0F2F4;
+}
+
+.triangle {
+    position: absolute;
+    left: calc(30% - 15px);
+    bottom: -10px;
+    font-size: 2.2em;
+    color: #F0F2F4;
+    transition: left 0.4s, color 0.4s;
+}
+
+.on-organiser {
+    left: calc(70% - 15px);
 }
 
 .ant-list-split .ant-list-item,
