@@ -36,5 +36,8 @@
     "showcase_organiser_body_3": "Retrieve valuable statistical data about your event, allowing you to adjust its characteristics in real time. Sell count under expectations ? Try lowering the prices. All tickets sold ? Raise the ticket count. Not enough Marketplace activity ? Lower your fees.",
 
 
-    "chat_with_us": "Chat with us !"
+    "chat_with_us": "Chat with us !",
+
+    "beta_warning_title": "We are currently in Closed Beta",
+    "beta_warning_desc": "If you want to enter the Closed Beta and preview the features, contact us via mail at contact@ticket721.com or through Slack, Telegram or Spectrum !"
 }
