@@ -5,6 +5,7 @@ import slack from '../../assets/slack.svg';
 import telegram from '../../assets/telegram.svg';
 import spectrum from '../../assets/spectrum.svg';
 import mail from '../../assets/mail.svg';
+import powered_by_ethereum from '../../assets/powered_by_eth.svg';
 import './index.css';
 
 class Footer extends React.Component {
@@ -14,13 +15,23 @@ class Footer extends React.Component {
                 width: '100%',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                padding: 6
+                justifyContent: 'space-between',
+                flexWrap: 'wrap'
             }}
         >
+
             <div
                 style={{
-                    width: '100%',
+                    width: 150
+                }}
+            >
+                <a href={'https://ethereum.org/'}>
+                    <img alt={'Ethereum'} src={powered_by_ethereum} className={'contact_logo'} style={{width: 150}}/>
+                </a>
+            </div>
+            <div
+                style={{
+                    width: 280,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'flex-end',

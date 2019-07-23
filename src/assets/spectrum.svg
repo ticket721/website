@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-    <g id="Subtract" transform="matrix(4,0,0,4,-14,-14)">
-        <path d="M6,14.5C6,15.328 6.672,16 7.5,16L9,16C12.866,16 16,19.134 16,23L16,24.5C16,25.328 16.672,26 17.5,26L24.5,26C25.328,26 26,25.328 26,24.5L26,23C26,13.611 18.389,6 9,6L7.5,6C6.672,6 6,6.672 6,7.5L6,14.5Z" style="fill:rgb(18,18,18);"/>
+    <g id="Subtract" transform="matrix(4.5,0,0,4.5,-22,-22)">
+        <path d="M6,14.5C6,15.328 6.672,16 7.5,16L9,16C12.866,16 16,19.134 16,23L16,24.5C16,25.328 16.672,26 17.5,26L24.5,26C25.328,26 26,25.328 26,24.5L26,23C26,13.611 18.389,6 9,6L7.5,6C6.672,6 6,6.672 6,7.5L6,14.5Z" style="fill:rgb(23,23,23);"/>
     </g>
 </svg>
