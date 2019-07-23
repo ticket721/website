@@ -1,11 +1,55 @@
 @media screen and (max-width: 768px) {
+    .App > .play-button {
+        top: 5px;
+        right: 5px;
+    }
+
     .tab > span {
         font-size: 2em;
+    }
+
+    .fixed > .tab {
+        padding: 5px 0;
     }
 }
 
 @media screen and (max-width: 450px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tabs {
+        padding: 0 10% 10px;
+    }
+
     .tab > span {
-        font-size: 1.5em;
+        font-size: 1.1em;
+    }
+
+    .selected > span {
+        font-size: 1.4em;
+    }
+
+    .triangle,
+    .on-organiser {
+        left: 0;
+        right: 0;
+    }
+
+    .fixed {
+        padding: 0 10%;
+    }
+
+    .fixed .tab > span {
+        font-size: 1.1em;
+        padding-top: 2px;
+    }
+
+    .fixed .selected > span {
+        font-size: 1.4em;
+    }
+
+    .fixed .tab > span::before {
+        padding-top: 2px;
     }
 }
