@@ -9,6 +9,7 @@ import Slogan from './sections/slogan';
 import Description from './sections/description';
 import Showcase from './sections/showcase';
 import Footer from './sections/footer';
+import i18n from './utils/i18n';
 const DynamicLogo = React.lazy(() => import('./components/logo'));
 
 
@@ -17,6 +18,7 @@ class App extends React.Component {
         super();
 
         this.state = {
+            language: i18n.language,
             userType: 'user',
             beta_warning: false
         }
@@ -27,6 +29,8 @@ class App extends React.Component {
         let tabs = document.getElementById('tabs');
         let slogan = document.getElementById('slogan');
         let playBtn = document.getElementById('play-btn');
+        let languageSel = document.getElementById('language-sel');
+
         window.addEventListener('scroll', () => {
             if (tabsAnchor.getBoundingClientRect().top <= 0) {
                 tabs.classList.add('fixed');
@@ -34,10 +38,13 @@ class App extends React.Component {
                 tabs.classList.remove('fixed');
             }
 
-            if (slogan.getBoundingClientRect().top <= 60) {
-                playBtn.classList.add('scroll');
+            if (slogan.getBoundingClientRect().top <= 30) {
+                playBtn.classList.add('scrolled');
+                languageSel.classList.add('scrolled');
+
             } else {
-                playBtn.classList.remove('scroll');
+                playBtn.classList.remove('scrolled');
+                languageSel.classList.remove('scrolled');
             }
         });
     }
@@ -60,6 +67,17 @@ class App extends React.Component {
         });
     }
 
+    setLanguage = () => {
+        if (i18n.language === 'en') {
+            i18n.changeLanguage('fr');
+        } else {
+            i18n.changeLanguage('en');
+        }
+        this.setState({
+            language: i18n.language
+        });
+    }
+
     render() {
         return (
             <div className="App">
@@ -67,6 +85,18 @@ class App extends React.Component {
                     open={this.state.beta_warning}
                     close_callback={this.closeBetaWarning}
                 />
+                <div
+                    id='language-sel'
+                    className='language-selector'
+                    onClick={this.setLanguage}>
+                    <span className={'en' + (this.state.language === 'en' ? ' selected' : '')}>
+                        EN
+                    </span>
+                    <div className='separator'></div>
+                    <span className={'fr' + (this.state.language === 'fr' ? ' selected' : '')}>
+                        FR
+                    </span>
+                </div>
                 <Button
                     id='play-btn'
                     className='play-button'
