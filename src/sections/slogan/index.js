@@ -7,7 +7,9 @@ import './mobile.css';
 class Slogan extends React.Component {
 
     render() {
-        return <div className='slogan'>
+        return <div
+                id='slogan'
+                className='slogan'>
             <Typography.Title>
                 {this.props.t('slogan_title')}
             </Typography.Title>
