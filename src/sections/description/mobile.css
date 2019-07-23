@@ -1,14 +1,6 @@
 @media screen and (max-width: 768px) {
-    .slogan {
-        margin: 150px 35px 150px;
-    }
-
-    .slogan > h1 {
-        font-size: 2.5em;
-    }
-    
-    .slogan-body {
-        font-size: 1.25em;
+    .descriptions {
+        margin: 0 100px;
     }
 
     .desc-row {
