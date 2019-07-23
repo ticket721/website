@@ -20,6 +20,26 @@ class App extends React.Component {
         }
     }
 
+    componentDidMount() {
+        let tabsAnchor = document.getElementById('tabs-anchor');
+        let tabs = document.getElementById('tabs');
+        let slogan = document.getElementById('slogan');
+        let playBtn = document.getElementById('play-btn');
+        window.addEventListener('scroll', () => {
+            if (tabsAnchor.getBoundingClientRect().top <= 0) {
+                tabs.classList.add('fixed');
+            } else {
+                tabs.classList.remove('fixed');
+            }
+
+            if (slogan.getBoundingClientRect().top <= 60) {
+                playBtn.classList.add('scroll');
+            } else {
+                playBtn.classList.remove('scroll');
+            }
+        });
+    }
+
     updateUserType(type) {
         if (this.state.userType !== type) {
             this.setState({ userType: type });
@@ -30,11 +50,16 @@ class App extends React.Component {
         return (
             <div className="App">
                 <Button
+                id='play-btn'
                 className='play-button'
                 type={'primary'}
                 size={'large'}>
-                    {this.props.t('run_app')}
-                    <Icon type='caret-right' />
+                    <Typography.Text className='play-text'>
+                        {this.props.t('run_app')}
+                    </Typography.Text>
+                    <Icon
+                    className='play-icon'
+                    type='caret-right' />
                 </Button>
                 <div className='logo-container'>
                     <Suspense fallback={<LoadingLogo/>}>
@@ -42,7 +67,10 @@ class App extends React.Component {
                     </Suspense>
                 </div>
                 <Slogan />
-                <div className='tabs'>
+                <div id='tabs-anchor'></div>
+                <div
+                id='tabs'
+                className='tabs'>
                     <div className={'tab' + (this.state.userType === 'user' ? ' selected' : '')}>
                         <Typography.Text
                         data-hover={this.props.t('tab_user_title')}

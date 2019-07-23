@@ -15,8 +15,8 @@ body {
 
 .App > .play-button {
     position: fixed;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
     z-index: 1000;
     border-color: #535353;
     color: #535353;
@@ -28,6 +28,19 @@ body {
     color: white;
     background-color: #535353;
     opacity: 1;
+}
+
+.play-button.scroll {
+    border-radius: 50%;
+    padding: 0 11px;
+}
+
+.scroll > .play-text {
+    display: none;
+}
+
+.scroll > i.play-icon {
+    margin-left: 0;
 }
 
 .logo-container {
@@ -47,9 +60,20 @@ body {
     background-color: #171717;
 }
 
+.tabs.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.tabs.fixed > .triangle {
+    display: none;
+}
+
 .tabs > .tab {
     flex: 1;
     padding: 10px 0;
+    transition: padding 0.2s;
 }
 
 .tab > span {
@@ -61,6 +85,12 @@ body {
     font-family: Roboto;
     font-weight: 300;
     cursor: pointer;
+    transition: font-size 0.2s, padding-top 0.2s;
+}
+
+.fixed .tab > span {
+    font-size: 1.8em;
+    padding-top: 5px;
 }
 
 .tab > span::before {
@@ -74,6 +104,10 @@ body {
     white-space: nowrap;
     content: attr(data-hover);
     transition: max-width 0.5s;
+}
+
+.fixed .tab > span::before {
+    padding-top: 5px;
 }
 
 .tab > span:hover::before {
