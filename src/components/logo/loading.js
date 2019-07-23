@@ -30,7 +30,7 @@ export default class LoadingLogo extends React.Component {
                 height:Math.floor(360 * ratio),
                 backgroundColor: this.state.background ? '#202020' : 'transparent'}}
         >
-            <img alt='' src={logo} onLoad={this.activate_background} style={{position: 'absolute', width: '100%', zIndex: 1, left: 0, top: 0}}/>
+            <img alt='' src={logo} onLoad={this.activate_background} style={{position: 'absolute', width: '104%', zIndex: 1, left: '-2%', top: '-2%'}}/>
         </div>
     }
 }
