@@ -3,6 +3,7 @@ import React, {Suspense} from 'react';
 import { withTranslation } from 'react-i18next';
 import './App.css';
 import './mobile.css';
+import BetaWarning from './components/beta_warning';
 import LoadingLogo from './components/logo/loading';
 import Slogan from './sections/slogan';
 import Description from './sections/description';
@@ -16,7 +17,8 @@ class App extends React.Component {
         super();
 
         this.state = {
-            userType: 'user'
+            userType: 'user',
+            beta_warning: false
         }
     }
 
@@ -46,20 +48,38 @@ class App extends React.Component {
         }
     }
 
+    openBetaWarning = () => {
+        this.setState({
+            beta_warning: true
+        });
+    }
+
+    closeBetaWarning = () => {
+        this.setState({
+            beta_warning: false
+        });
+    }
+
     render() {
         return (
             <div className="App">
+                <BetaWarning
+                    open={this.state.beta_warning}
+                    close_callback={this.closeBetaWarning}
+                />
                 <Button
-                id='play-btn'
-                className='play-button'
-                type={'primary'}
-                size={'large'}>
+                    id='play-btn'
+                    className='play-button'
+                    type={'primary'}
+                    size={'large'}
+                    onClick={this.openBetaWarning}
+                >
                     <Typography.Text className='play-text'>
                         {this.props.t('run_app')}
                     </Typography.Text>
                     <Icon
-                    className='play-icon'
-                    type='caret-right' />
+                        className='play-icon'
+                        type='caret-right' />
                 </Button>
                 <div className='logo-container'>
                     <Suspense fallback={<LoadingLogo/>}>
@@ -69,30 +89,30 @@ class App extends React.Component {
                 <Slogan />
                 <div id='tabs-anchor'></div>
                 <div
-                id='tabs'
-                className='tabs'>
+                    id='tabs'
+                    className='tabs'>
                     <div className={'tab' + (this.state.userType === 'user' ? ' selected' : '')}>
                         <Typography.Text
-                        data-hover={this.props.t('tab_user_title')}
-                        onClick={() => this.updateUserType('user')}>
+                            data-hover={this.props.t('tab_user_title')}
+                            onClick={() => this.updateUserType('user')}>
                             {this.props.t('tab_user_title')}
                         </Typography.Text>
                     </div>
                     <div className={'tab' + (this.state.userType === 'organiser' ? ' selected' : '')}>
                         <Typography.Text
-                        data-hover={this.props.t('tab_organiser_title')}
-                        onClick={() => this.updateUserType('organiser')}>
+                            data-hover={this.props.t('tab_organiser_title')}
+                            onClick={() => this.updateUserType('organiser')}>
                             {this.props.t('tab_organiser_title')}
                         </Typography.Text>
                     </div>
                     <Icon
-                    className={'triangle' + (this.state.userType === 'organiser' ? ' on-organiser' : '')}
-                    type='caret-up' />
+                        className={'triangle' + (this.state.userType === 'organiser' ? ' on-organiser' : '')}
+                        type='caret-up' />
                 </div>
                 <Description
-                userType={this.state.userType}/>
+                    userType={this.state.userType}/>
                 <Showcase
-                userType={this.state.userType}/>
+                    userType={this.state.userType}/>
                 <Footer/>
             </div>
         );
