@@ -7,8 +7,8 @@ export default class Logo extends React.Component {
         const ratio = (window.innerWidth / 2) / 640;
 
         return <div style={{position: 'relative', overflow: 'hidden', maxHeight: 360, maxWidth: 640, width: Math.floor(640 * ratio), height:Math.floor(360 * ratio), backgroundColor: '#202020'}}>
-            <img alt='' src={logo} style={{position: 'absolute', width: '100%', zIndex: 1, left: 0, top: 0}}/>
-            <video style={{marginLeft: 5, marginTop: 5, zIndex: 0}} src={video} type="video/mp4" autoPlay={true} playsInline={true} width={630} height={350} loop={true} muted={true}/>
+            <img alt='' src={logo} style={{position: 'absolute', width: '104%', zIndex: 1, left: '-2%', top: '-2%'}}/>
+            <video style={{marginLeft: 10, marginTop: 10, zIndex: 0}} src={video} type="video/mp4" autoPlay={true} playsInline={true} width={620} height={340} loop={true} muted={true}/>
         </div>
     }
 }
