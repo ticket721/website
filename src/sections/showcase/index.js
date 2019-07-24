@@ -15,7 +15,7 @@ class Showcase extends React.Component {
         super();
 
         this.state = {
-            activeTab: 'home'
+            activeTab: 'admin'
         }
     }
 
