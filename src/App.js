@@ -83,18 +83,17 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <Helmet htmlAttributes={{lang: i18n.language}}>
-                    <meta charset="utf-8" />
-                    <link rel="shortcut icon" href="/favicon.ico" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <meta name="theme-color" content="#171717" />
-                    <meta name="keywords" content="Blockchain,Ethereum,ticketing,crypto,cryptocurrency,erc721,dapp"/>
-                    <meta name="author" content="Ticket721"/>
-                    <meta name="description" content={this.props.t('header_meta_description')}/>
-                    <link rel="manifest" href="/manifest.json" />
-                    <title>{this.props.t('header_title')}</title>
-                </Helmet>
                 <div className="App-body">
+                    <Helmet htmlAttributes={{lang: i18n.language}}>
+                        <meta charset="utf-8" />
+                        <link rel="shortcut icon" href="/favicon.ico" />
+                        <meta name="theme-color" content="#171717" />
+                        <meta name="keywords" content="Blockchain,Ethereum,ticketing,crypto,cryptocurrency,erc721,dapp"/>
+                        <meta name="author" content="Ticket721"/>
+                        <meta name="description" content={this.props.t('header_meta_description')}/>
+                        <link rel="manifest" href="/manifest.json" />
+                        <title>{this.props.t('header_title')}</title>
+                    </Helmet>
                     <BetaWarning
                         open={this.state.beta_warning}
                         close_callback={this.closeBetaWarning}

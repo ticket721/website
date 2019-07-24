@@ -68,7 +68,7 @@ class Showcase extends React.Component {
                     <Typography.Text className='showcase-subtitle'>
                         {this.props.t('showcase_' + this.props.userType + '_subtitle_' + (index + 1))}
                     </Typography.Text>
-                    <Typography.Paragraph className='showcase-desc'>
+                    <Typography.Paragraph className='showcase-desc' style={{textAlign: 'justify', textJustify: 'inter-word'}}>
                         {this.props.t('showcase_' + this.props.userType + '_body_' + (index + 1))}
                     </Typography.Paragraph>
                     <div className='showcase-screen'>
