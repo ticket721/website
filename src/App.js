@@ -70,7 +70,7 @@ class App extends React.Component {
     }
 
     setLanguage = () => {
-        if (i18n.language === 'en') {
+        if (i18n.language.indexOf('en')  === 0) {
             i18n.changeLanguage('fr');
         } else {
             i18n.changeLanguage('en');
@@ -94,7 +94,6 @@ class App extends React.Component {
                     <link rel="manifest" href="/manifest.json" />
                     <title>{this.props.t('header_title')}</title>
                 </Helmet>
-                <body>
                 <div className="App-body">
                     <BetaWarning
                         open={this.state.beta_warning}
@@ -104,7 +103,7 @@ class App extends React.Component {
                         id='language-sel'
                         className='language-selector'
                         onClick={this.setLanguage}>
-                    <span className={'en' + (this.state.language === 'en' ? ' selected' : '')}>
+                    <span className={'en' + (this.state.language.indexOf('en') === 0 ? ' selected' : '')}>
                         EN
                     </span>
                         <div className='separator'></div>
@@ -160,7 +159,6 @@ class App extends React.Component {
                         userType={this.state.userType}/>
                     <Footer/>
                 </div>
-                </body>
             </div>
         );
     }

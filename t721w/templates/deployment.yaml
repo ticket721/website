@@ -1,0 +1,28 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    name: "{{ .Release.Name }}-website"
+    labels:
+        app: "{{ template "t721w.fullname" . }}-website"
+        chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+        release: "{{ .Release.Name }}"
+        heritage: "{{ .Release.Service }}"
+spec:
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: "{{ template "t721w.fullname" . }}-website"
+                chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+                release: "{{ .Release.Name }}"
+                heritage: "{{ .Release.Service }}"
+        spec:
+            containers:
+                - name: "{{ .Release.Name }}-website"
+                  image: "{{ .Values.website.container.image }}:{{ .Values.website.container.version }}"
+                  imagePullPolicy: Always
+                  ports:
+                      - name: web
+                        containerPort: 5000
+                        protocol: TCP

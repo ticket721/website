@@ -1,0 +1,25 @@
+env:
+    gcp: false
+
+letsencrypt:
+    email: iulian@ticket721.com
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+
+website:
+    container:
+        image: ticket721/website
+        version: latest
+    service:
+        type: NodePort
+        port: 5000
+    ingress:
+        host: ticket721.com
+
+nginx:
+    rbac:
+        create: true
+    controller:
+        service:
+            loadBalancerIP: {}
+        ingressClass: "nginx"
+
