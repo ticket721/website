@@ -36,5 +36,8 @@
     "showcase_organiser_body_3": "Retrieve valuable statistical data about your event, allowing you to adjust its characteristics in real time. Sell count under expectations ? Try lowering the prices. All tickets sold ? Raise the ticket count. Not enough Marketplace activity ? Lower your fees.",
 
     "beta_warning_title": "We are currently in Closed Beta",
-    "beta_warning_desc": "If you want to enter the Closed Beta and preview the features, contact us via mail at contact@ticket721.com or through Slack, Telegram or Spectrum !"
+    "beta_warning_desc": "If you want to enter the Closed Beta and preview the features, contact us via mail at contact@ticket721.com or through Slack, Telegram or Spectrum !",
+
+    "header_title": "Ticket721 - The decentralized ticketing platform built on Ethereum",
+    "header_meta_description": "Ticket721 is the next generation ticketing platform, empowering both users and organizers. The platform provides a highly secured digital ticket that can be traded and exchanged freely and safely."
 }
