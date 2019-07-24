@@ -23,7 +23,7 @@
     "showcase_user_subtitle_1": "Home Page",
     "showcase_user_subtitle_2": "Marketplace",
     "showcase_user_subtitle_3": "Nomad Wallet",
-    "showcase_user_body_1": "Discover all the new events happening near you and select the ones that will make your weeks more exceptional. Get more information about it by going to the dedicated Event Page.",
+    "showcase_user_body_1": "Discover all the new events nearby and choose the ones that will make your day. Get more information about it by going to the dedicated Event Page.",
     "showcase_user_body_2": "Browse tickets sold by other users to find your last minute ticket for the event of your dreams. The Marketplace allows you to sell your tickets to other users in a fast and secured manner. You might even make some profit.",
     "showcase_user_body_3": "Stack all your tickets in your Secured Wallet and access it directly on your smartphone without any connectivity.",
 
@@ -31,12 +31,9 @@
     "showcase_organiser_subtitle_1": "Administration Page",
     "showcase_organiser_subtitle_2": "Scanner App",
     "showcase_organiser_subtitle_3": "Statistics",
-    "showcase_organiser_body_1": "Create or modify your events in a simple manner, directly from the website. You set all the rules, how the tickets are sold and if users are allowed to use the Marketplace. Then watch your funds go up in real time and decide when to withdraw.",
+    "showcase_organiser_body_1": "Create or modify your events in a simple way, directly from the platform. You set all the rules, how the tickets are sold and if users are allowed to use the Marketplace. Then watch your funds go up in real time and decide when to withdraw.",
     "showcase_organiser_body_2": "Use our Scanner to verify the authenticity of a ticket. QR Codes are generated every 10 seconds and contain a cryptographic proof that a user owns a ticket. The scanner will check all these information for you.",
     "showcase_organiser_body_3": "Retrieve valuable statistical data about your event, allowing you to adjust its characteristics in real time. Sell count under expectations ? Try lowering the prices. All tickets sold ? Raise the ticket count. Not enough Marketplace activity ? Lower your fees.",
-
-
-    "chat_with_us": "Chat with us !",
 
     "beta_warning_title": "We are currently in Closed Beta",
     "beta_warning_desc": "If you want to enter the Closed Beta and preview the features, contact us via mail at contact@ticket721.com or through Slack, Telegram or Spectrum !"

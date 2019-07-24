@@ -34,17 +34,75 @@ body {
     color: white;
 }
 
-.play-button.scroll {
+.play-button.scrolled {
     border-radius: 50%;
+    border-color: #949596;
     padding: 0 11px;
 }
 
-.scroll > .play-text {
+.play-button.scrolled:hover {
+    background-color: #949596;
+}
+
+.play-button.scrolled > .play-text {
     display: none;
 }
 
-.scroll > i.play-icon {
+.play-button.scrolled > i.play-icon {
+    color: #949596;
     margin-left: 0;
+}
+
+.play-button.scrolled:hover > i.play-icon {
+    color: white;
+}
+
+.language-selector {
+    position: fixed;
+    top: 5px;
+    left: 10px;
+    width: 55px;
+    height: 45px;
+    z-index: 1000;
+    text-align: left;
+    cursor: pointer;
+}
+
+.language-selector > span {
+    color: #949596;
+}
+
+.language-selector > .selected {
+    color: #252525;
+    font-size: 1.2em;
+}
+
+.language-selector > .fr {
+    position: absolute;
+    top: 20px;
+    left: 32px;
+}
+
+.language-selector > .separator {
+    position: absolute;
+    top: 21px;
+    left: 9px;
+    width: 33px;
+    height: 1px;
+    transform: rotate(-45deg);
+    background-color: #252525;
+}
+
+.language-selector.scrolled > .span {
+    color: #949596;
+}
+
+.language-selector.scrolled > .selected {
+    color: #FFFBFB;
+}
+
+.language-selector.scrolled > .separator {
+    background-color: #FFFBFB;
 }
 
 .logo-container {
