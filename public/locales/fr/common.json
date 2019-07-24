@@ -36,5 +36,8 @@
     "showcase_organiser_body_3": "Collectez des données utiles concernant vos évènements qui vous permettront de les modifier. Les ventes ne sont pas à la hauteur de vos espérances ? Baissez facilement les prix. Tous vos tickets sont vendus ? Augmentez le nombre de tickets en quelques clics. Pas assez d’activité sur la Marketplace ? Ajuster les taxes.",
 
     "beta_warning_title": "Nous sommes actuellement en Closed Beta",
-    "beta_warning_desc": "Si vous souhaitez rejoindre la Closed Beta et avoir un apercu des fonctionnalités, veuillez nous contacter via email à l'adresse contact@ticket721.com ou sur Slack, Telegram ou Spectrum !"
+    "beta_warning_desc": "Si vous souhaitez rejoindre la Closed Beta et avoir un apercu des fonctionnalités, veuillez nous contacter via email à l'adresse contact@ticket721.com ou sur Slack, Telegram ou Spectrum !",
+
+    "header_title": "Ticket721 - La billetterie décentralisée bâtie sur Ethereum",
+    "header_meta_description": "Ticket721 est une billetterie next-gen qui redonne le pouvoir aux utilisateurs et aux organisateurs. La plateforme propose un ticket digital hautement sécurisé, échangeable et revendable."
 }

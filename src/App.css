@@ -8,12 +8,17 @@ body {
     height: 100%;
 }
 
+.App-body {
+    text-align: center;
+    height: 100%;
+}
+
 .App {
     text-align: center;
     height: 100%;
 }
 
-.App > .play-button {
+.App-body > .play-button {
     position: fixed;
     right: 10px;
     top: 10px;
@@ -23,14 +28,14 @@ body {
     background-color: transparent;
 }
 
-.App > .play-button:hover {
+.App-body > .play-button:hover {
     border-color: transparent;
     color: white;
     background-color: #535353;
     opacity: 1;
 }
 
-.App > .play-button:hover > .play-text {
+.App-body > .play-button:hover > .play-text {
     color: white;
 }
 
