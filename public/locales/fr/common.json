@@ -1,6 +1,6 @@
 {
     "run_app": "lancer l'app",
-    "slogan_title": "Découvrez la billeterie du futur",
+    "slogan_title": "Découvrez la billetterie du futur",
     "slogan_body": "Ticket721 se base sur le web 3.0 et ses technologies pour offrir une billeterie high-tech hautement sécurisée à ses utilisateurs",
 
     "tab_user_title": "Utilisateur",
@@ -31,7 +31,7 @@
     "showcase_organiser_subtitle_1": "Page d'Administration",
     "showcase_organiser_subtitle_2": "Scanner App",
     "showcase_organiser_subtitle_3": "Statistiques",
-    "showcase_organiser_body_1": "Créez et modifiez aisément vos évènement depuis la plateforme. C’est vous qui fixez les règles : de quelle manière sont vendus les tickets et si les utilisateurs peuvent ou non disposer de la Marketplace. Surveillez l’évolution de votre solde en temps réel et décidez quand vous souhaitez le retirer.",
+    "showcase_organiser_body_1": "Créez et modifiez aisément vos évènement depuis la plateforme. Vous fixez les regles : de quelle manière sont vendus les tickets et si les utilisateurs peuvent ou non disposer de la Marketplace. Surveillez l’évolution de votre solde en temps réel et décidez quand vous souhaitez le retirer.",
     "showcase_organiser_body_2": "Utilisez la Scanner app afin de vérifier l'authenticité d'un ticket. Grâce à des QR codes générés toutes les 10 secondes contenant une preuve cryptographique, vous aurez la certitude que l'utilisateur est bien le propriétaire du ticket. Le scanner vérifie toutes les informations pour vous.",
     "showcase_organiser_body_3": "Collectez des données utiles concernant vos évènements qui vous permettront de les modifier. Les ventes ne sont pas à la hauteur de vos espérances ? Baissez facilement les prix. Tous vos tickets sont vendus ? Augmentez le nombre de tickets en quelques clics. Pas assez d’activité sur la Marketplace ? Ajustez les taxes.",
 

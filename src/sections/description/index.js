@@ -54,7 +54,7 @@ class Description extends React.Component {
                         <Typography.Title level={3}>
                             {this.props.t('desc_' + this.props.userType + '_title_1')}
                         </Typography.Title>
-                        <Typography.Text style={{textAlign: 'justify', textJustify: 'inter-word'}}>
+                        <Typography.Text>
                             {this.props.t('desc_' + this.props.userType + '_body_1')}
                         </Typography.Text> 
                     </div>
@@ -64,7 +64,7 @@ class Description extends React.Component {
                         <Typography.Title level={3}>
                             {this.props.t('desc_' + this.props.userType + '_title_2')}
                         </Typography.Title>
-                        <Typography.Text style={{textAlign: 'justify', textJustify: 'inter-word'}}>
+                        <Typography.Text>
                             {this.props.t('desc_' + this.props.userType + '_body_2')}
                         </Typography.Text> 
                     </div>
@@ -80,7 +80,7 @@ class Description extends React.Component {
                         <Typography.Title level={3}>
                             {this.props.t('desc_' + this.props.userType + '_title_3')}
                         </Typography.Title>
-                        <Typography.Text style={{textAlign: 'justify', textJustify: 'inter-word'}}>
+                        <Typography.Text>
                             {this.props.t('desc_' + this.props.userType + '_body_3')}
                         </Typography.Text> 
                     </div>
