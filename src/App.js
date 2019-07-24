@@ -10,12 +10,14 @@ import Description from './sections/description';
 import Showcase from './sections/showcase';
 import Footer from './sections/footer';
 import i18n from './utils/i18n';
+import {Helmet} from "react-helmet";
 const DynamicLogo = React.lazy(() => import('./components/logo'));
 
 
 class App extends React.Component {
     constructor() {
         super();
+
 
         this.state = {
             language: i18n.language,
@@ -81,69 +83,84 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <BetaWarning
-                    open={this.state.beta_warning}
-                    close_callback={this.closeBetaWarning}
-                />
-                <div
-                    id='language-sel'
-                    className='language-selector'
-                    onClick={this.setLanguage}>
+                <Helmet htmlAttributes={{lang: i18n.language}}>
+                    <meta charset="utf-8" />
+                    <link rel="shortcut icon" href="/favicon.ico" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <meta name="theme-color" content="#171717" />
+                    <meta name="keywords" content="Blockchain,Ethereum,ticketing,crypto,cryptocurrency,erc721,dapp"/>
+                    <meta name="author" content="Ticket721"/>
+                    <meta name="description" content={this.props.t('header_meta_description')}/>
+                    <link rel="manifest" href="/manifest.json" />
+                    <title>{this.props.t('header_title')}</title>
+                </Helmet>
+                <body>
+                <div className="App-body">
+                    <BetaWarning
+                        open={this.state.beta_warning}
+                        close_callback={this.closeBetaWarning}
+                    />
+                    <div
+                        id='language-sel'
+                        className='language-selector'
+                        onClick={this.setLanguage}>
                     <span className={'en' + (this.state.language === 'en' ? ' selected' : '')}>
                         EN
                     </span>
-                    <div className='separator'></div>
-                    <span className={'fr' + (this.state.language === 'fr' ? ' selected' : '')}>
+                        <div className='separator'></div>
+                        <span className={'fr' + (this.state.language === 'fr' ? ' selected' : '')}>
                         FR
                     </span>
-                </div>
-                <Button
-                    id='play-btn'
-                    className='play-button'
-                    type={'primary'}
-                    size={'large'}
-                    onClick={this.openBetaWarning}
-                >
-                    <Typography.Text className='play-text'>
-                        {this.props.t('run_app')}
-                    </Typography.Text>
-                    <Icon
-                        className='play-icon'
-                        type='caret-right' />
-                </Button>
-                <div className='logo-container'>
-                    <Suspense fallback={<LoadingLogo/>}>
-                        <DynamicLogo/>
-                    </Suspense>
-                </div>
-                <Slogan />
-                <div id='tabs-anchor'></div>
-                <div
-                    id='tabs'
-                    className='tabs'>
-                    <div className={'tab' + (this.state.userType === 'user' ? ' selected' : '')}>
-                        <Typography.Text
-                            data-hover={this.props.t('tab_user_title')}
-                            onClick={() => this.updateUserType('user')}>
-                            {this.props.t('tab_user_title')}
-                        </Typography.Text>
                     </div>
-                    <div className={'tab' + (this.state.userType === 'organiser' ? ' selected' : '')}>
-                        <Typography.Text
-                            data-hover={this.props.t('tab_organiser_title')}
-                            onClick={() => this.updateUserType('organiser')}>
-                            {this.props.t('tab_organiser_title')}
+                    <Button
+                        id='play-btn'
+                        className='play-button'
+                        type={'primary'}
+                        size={'large'}
+                        onClick={this.openBetaWarning}
+                    >
+                        <Typography.Text className='play-text'>
+                            {this.props.t('run_app')}
                         </Typography.Text>
+                        <Icon
+                            className='play-icon'
+                            type='caret-right' />
+                    </Button>
+                    <div className='logo-container'>
+                        <Suspense fallback={<LoadingLogo/>}>
+                            <DynamicLogo/>
+                        </Suspense>
                     </div>
-                    <Icon
-                        className={'triangle' + (this.state.userType === 'organiser' ? ' on-organiser' : '')}
-                        type='caret-up' />
+                    <Slogan />
+                    <div id='tabs-anchor'></div>
+                    <div
+                        id='tabs'
+                        className='tabs'>
+                        <div className={'tab' + (this.state.userType === 'user' ? ' selected' : '')}>
+                            <Typography.Text
+                                data-hover={this.props.t('tab_user_title')}
+                                onClick={() => this.updateUserType('user')}>
+                                {this.props.t('tab_user_title')}
+                            </Typography.Text>
+                        </div>
+                        <div className={'tab' + (this.state.userType === 'organiser' ? ' selected' : '')}>
+                            <Typography.Text
+                                data-hover={this.props.t('tab_organiser_title')}
+                                onClick={() => this.updateUserType('organiser')}>
+                                {this.props.t('tab_organiser_title')}
+                            </Typography.Text>
+                        </div>
+                        <Icon
+                            className={'triangle' + (this.state.userType === 'organiser' ? ' on-organiser' : '')}
+                            type='caret-up' />
+                    </div>
+                    <Description
+                        userType={this.state.userType}/>
+                    <Showcase
+                        userType={this.state.userType}/>
+                    <Footer/>
                 </div>
-                <Description
-                    userType={this.state.userType}/>
-                <Showcase
-                    userType={this.state.userType}/>
-                <Footer/>
+                </body>
             </div>
         );
     }
