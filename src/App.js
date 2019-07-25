@@ -93,6 +93,8 @@ class App extends React.Component {
                         <meta name="description" content={this.props.t('header_meta_description')}/>
                         <link rel="manifest" href="/manifest.json" />
                         <title>{this.props.t('header_title')}</title>
+                        <meta property="og:title" content={this.props.t('header_title')} />
+                        <meta property="og:description" content={this.props.t('header_meta_description')} />
                     </Helmet>
                     <BetaWarning
                         open={this.state.beta_warning}
