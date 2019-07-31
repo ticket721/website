@@ -11,7 +11,12 @@ import Showcase from './sections/showcase';
 import Footer from './sections/footer';
 import i18n from './utils/i18n';
 import {Helmet} from "react-helmet";
-const DynamicLogo = React.lazy(() => import('./components/logo'));
+import {
+    BrowserView,
+    MobileView,
+} from "react-device-detect";
+const DynamicDesktopLogo = React.lazy(() => import('./components/logo/desktop'));
+const DynamicMobileLogo = React.lazy(() => import('./components/logo/mobile'));
 
 
 class App extends React.Component {
@@ -127,9 +132,16 @@ class App extends React.Component {
                             type='caret-right' />
                     </Button>
                     <div className='logo-container'>
-                        <Suspense fallback={<LoadingLogo/>}>
-                            <DynamicLogo/>
-                        </Suspense>
+                        <BrowserView>
+                            <Suspense fallback={<LoadingLogo/>}>
+                                <DynamicDesktopLogo/>
+                            </Suspense>
+                        </BrowserView>
+                        <MobileView>
+                            <Suspense fallback={<LoadingLogo/>}>
+                                <DynamicMobileLogo/>
+                            </Suspense>
+                        </MobileView>
                     </div>
                     <Slogan />
                     <div id='tabs-anchor'></div>
