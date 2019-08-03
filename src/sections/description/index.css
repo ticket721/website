@@ -22,7 +22,7 @@
     margin-top: 20px;
 }
 
-.organiser .title {
+.organizer .title {
     justify-content: flex-end;
 }
 
@@ -42,7 +42,8 @@
     background-color: #F0F2F4;
 }
 
-.desc-row.desc-2 > img {
+.desc-row.desc-2 > img,
+.desc-row.desc-4 > img {
     margin-right: 0;
     margin-left: 50px;
 }

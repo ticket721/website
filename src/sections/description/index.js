@@ -4,9 +4,11 @@ import { withTranslation } from 'react-i18next';
 import coins from '../../assets/coins.svg';
 import locked_wallet from '../../assets/locked_wallet.svg';
 import shopping_bag from '../../assets/shopping_bag.svg';
+import pre_purchased from '../../assets/pre_purchased.svg';
 import configure from '../../assets/configure.svg';
 import store_revenue from '../../assets/store_revenue.svg';
 import stats from '../../assets/stats.svg';
+import stock from '../../assets/stock.svg';
 import './index.css';
 import './mobile.css';
 
@@ -26,9 +28,13 @@ class Description extends React.Component {
                 {
                     name: 'Marketplace',
                     src: shopping_bag
+                },
+                {
+                    name: 'Goods',
+                    src: pre_purchased
                 }
             ],
-            organiser: [
+            organizer: [
                 {
                     name: 'Configuring',
                     src: configure
@@ -40,6 +46,10 @@ class Description extends React.Component {
                 {
                     name: 'Stats',
                     src: stats
+                },
+                {
+                    name: 'Stock',
+                    src: stock
                 }
             ]
         };
@@ -84,6 +94,19 @@ class Description extends React.Component {
                             {this.props.t('desc_' + this.props.userType + '_body_3')}
                         </Typography.Text> 
                     </div>
+                </div>
+                <div className='desc-row desc-4'>
+                    <div className='description'>
+                        <Typography.Title level={3}>
+                            {this.props.t('desc_' + this.props.userType + '_title_4')}
+                        </Typography.Title>
+                        <Typography.Text>
+                            {this.props.t('desc_' + this.props.userType + '_body_4')}
+                        </Typography.Text> 
+                    </div>
+                    <img
+                    src={iconData[this.props.userType][3].src}
+                    alt={iconData[this.props.userType][3].name}/>
                 </div>
             </div>
         </div>;

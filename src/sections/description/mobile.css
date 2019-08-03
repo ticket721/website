@@ -8,12 +8,14 @@
         margin-top: 150px;
     }
 
-    .desc-row.desc-2 {
+    .desc-row.desc-2,
+    .desc-row.desc-4 {
         flex-direction: column-reverse;
     }
 
     .desc-row > img,
-    .desc-row.desc-2 > img {
+    .desc-row.desc-2 > img,
+    .desc-row.desc-4 > img {
         margin: 0;
         width: 300px;
     }
