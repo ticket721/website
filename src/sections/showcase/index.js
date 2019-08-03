@@ -43,7 +43,7 @@ class Showcase extends React.Component {
                     src: wallet_screen
                 },
             },
-            organiser: {
+            organizer: {
                 admin: {
                     name: 'AdministrationScreen',
                     src: admin_screen

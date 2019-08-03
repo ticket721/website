@@ -194,7 +194,7 @@ body {
     transition: left 0.4s, color 0.4s;
 }
 
-.on-organiser {
+.on-organizer {
     left: calc(70% - 15px);
 }
 

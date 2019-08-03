@@ -155,15 +155,15 @@ class App extends React.Component {
                                 {this.props.t('tab_user_title')}
                             </Typography.Text>
                         </div>
-                        <div className={'tab' + (this.state.userType === 'organiser' ? ' selected' : '')}>
+                        <div className={'tab' + (this.state.userType === 'organizer' ? ' selected' : '')}>
                             <Typography.Text
-                                data-hover={this.props.t('tab_organiser_title')}
-                                onClick={() => this.updateUserType('organiser')}>
-                                {this.props.t('tab_organiser_title')}
+                                data-hover={this.props.t('tab_organizer_title')}
+                                onClick={() => this.updateUserType('organizer')}>
+                                {this.props.t('tab_organizer_title')}
                             </Typography.Text>
                         </div>
                         <Icon
-                            className={'triangle' + (this.state.userType === 'organiser' ? ' on-organiser' : '')}
+                            className={'triangle' + (this.state.userType === 'organizer' ? ' on-organizer' : '')}
                             type='caret-up' />
                     </div>
                     <Description
