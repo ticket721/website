@@ -26,7 +26,7 @@ class App extends React.Component {
 
         this.state = {
             language: i18n.language,
-            userType: 'organiser',
+            userType: 'organizer',
             beta_warning: false
         }
     }
