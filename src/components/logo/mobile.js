@@ -26,7 +26,8 @@ export default class MobileLogo extends React.Component {
             <img alt='' onLoad={this.activate_background} src={logo} style={{position: 'absolute', width: '104%', zIndex: 1, left: '-2%', top: '-2%'}}/>
             {
                 this.state.background ?
-                    <img alt='' src={animation} style={{zIndex: 0}} width={620 * ratio} height={340 * ratio} />
+                    //<img alt='' src={animation} style={{zIndex: 0}} width={620 * ratio} height={340 * ratio} />
+                    null
                     :
                     null
             }
