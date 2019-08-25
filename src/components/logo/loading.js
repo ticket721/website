@@ -28,7 +28,7 @@ export default class LoadingLogo extends React.Component {
                 maxWidth: 640,
                 width: Math.floor(640 * ratio),
                 height:Math.floor(360 * ratio),
-                backgroundColor: this.state.background ? '#202020' : 'transparent'}}
+                backgroundColor: this.state.background ? '#131313' : 'transparent'}}
         >
             <img alt='' src={logo} onLoad={this.activate_background} style={{position: 'absolute', width: '104%', zIndex: 1, left: '-2%', top: '-2%'}}/>
         </div>
